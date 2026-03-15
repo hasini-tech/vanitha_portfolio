@@ -1,0 +1,359 @@
+/* ============================================================
+   App.css — Vanitha S | Digital Marketing Portfolio
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navy:   #0d1b3e;
+  --blue:   #1a3a6b;
+  --accent: #4a90d9;
+  --gold:   #c9a84c;
+  --light:  #f4f7fb;
+  --white:  #ffffff;
+  --text:   #2c3e50;
+  --muted:  #7a8fa6;
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--light);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: #d4b55a; }
+
+/* ── Selection ── */
+::selection {
+  background: rgba(201, 168, 76, 0.25);
+  color: var(--navy);
+}
+
+/* ── Global Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.7); }
+}
+
+@keyframes scrollLine {
+  0%   { opacity: 1; transform: scaleY(1) translateY(0); }
+  100% { opacity: 0; transform: scaleY(0.3) translateY(20px); }
+}
+
+/* ── Typography Helpers ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+}
+
+p { line-height: 1.8; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Section Base ── */
+section {
+  position: relative;
+}
+
+/* ── Utility Classes ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.section-title span { color: var(--accent); }
+
+.section-title-light {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.section-title-light span { color: var(--accent); }
+
+/* ── Buttons ── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), #d4b55a);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding: 15px 36px;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(201, 168, 76, 0.45);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding: 15px 36px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+/* ── Cards ── */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e8eef6;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(13, 27, 62, 0.1);
+}
+
+/* ── Divider ── */
+.divider {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin-bottom: 24px;
+}
+
+/* ── Badge / Pills ── */
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+/* ── Gradient Backgrounds ── */
+.bg-navy    { background: var(--navy); }
+.bg-light   { background: var(--light); }
+.bg-white   { background: var(--white); }
+.bg-gradient {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+}
+.bg-hero {
+  background: linear-gradient(135deg, #060e1e 0%, #0d1b3e 45%, #1a3a6b 100%);
+}
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--gold));
+  border-radius: 2px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--light);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* ── Skill Bar ── */
+.skill-bar-bg {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  transition: width 1s ease;
+}
+
+/* ── Form Elements ── */
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 13px 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ── Responsive Breakpoints ── */
+@media (max-width: 1024px) {
+  .container { padding: 0 40px; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+
+  .section-title,
+  .section-title-light {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+}
+
+/* ── Smooth Transitions ── */
+* { transition-property: none; }
+
+a, button, input, textarea,
+.card, [class*="-card"],
+[class*="-btn"], [class*="btn-"] {
+  transition-property: transform, box-shadow, background, border-color, color, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+/* ── Focus Visible ── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Print ── */
+@media print {
+  .nb, .h-cta, .h-scroll { display: none !important; }
+  body { background: white; color: black; }
+}
