@@ -11,7 +11,7 @@ export default function Footer() {
       `}</style>
 
       <footer className="ft">
-        <p>Copyright {year} <span>Vanitha S</span>. Digital Marketing Portfolio | Builted by <span>Hasini</span></p>
+        <p>Copyright {year} <span>Vanitha S</span>. Digital Marketing Portfolio | Built by <span>Hasini</span></p>
       </footer>
     </>
   );
