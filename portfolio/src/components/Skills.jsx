@@ -34,7 +34,8 @@ export default function Skills() {
         .sk-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
         .sk-b{background:rgba(74,144,217,.12);border:1px solid rgba(74,144,217,.3);color:rgba(255,255,255,.75);font-size:12px;font-weight:500;padding:7px 18px;border-radius:100px;letter-spacing:.5px;transition:all .2s;cursor:default;}
         .sk-b:hover{background:rgba(74,144,217,.25);border-color:#4a90d9;color:#fff;}
-        @media(max-width:768px){.sk{padding:70px 24px;}.sk-grid{grid-template-columns:1fr;}}
+        @media(max-width:768px){.sk{padding:70px 0;}.sk-in{max-width:100%;}.sk-hd{margin-bottom:44px;padding:0 24px;}.sk-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:24px;padding:0 24px 18px;margin-bottom:42px;-webkit-overflow-scrolling:touch;}.sk-grid::-webkit-scrollbar{height:4px;}.sk-grid::-webkit-scrollbar-track{background:rgba(255,255,255,.08);border-radius:100px;margin:0 24px;}.sk-grid::-webkit-scrollbar-thumb{background:#c9a84c;border-radius:100px;}.sk-card{flex:0 0 min(82vw,420px);scroll-snap-align:start;}.sk-bt,.sk-badges{margin-left:24px;margin-right:24px;}}
+        @media(max-width:480px){.sk{padding:60px 0;}.sk-hd{padding:0 16px;}.sk-grid{gap:14px;scroll-padding:16px;padding:0 16px 18px;}.sk-grid::-webkit-scrollbar-track{margin:0 16px;}.sk-card{flex-basis:86vw;padding:20px 18px;}.sk-top{align-items:flex-start;gap:14px;}.sk-nw{align-items:flex-start;}.sk-nm{line-height:1.4;}.sk-bt,.sk-badges{margin-left:16px;margin-right:16px;}.sk-badges{justify-content:flex-start;}.sk-b{font-size:11px;padding:7px 12px;}}
       `}</style>
 
       <section className="sk" id="skills">

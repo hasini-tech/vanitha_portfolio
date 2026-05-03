@@ -25,7 +25,8 @@ export default function Projects() {
         .pr-desc{font-size:13.5px;line-height:1.75;color:#4a5568;margin-bottom:20px;}
         .pr-tags{display:flex;flex-wrap:wrap;gap:8px;}
         .pr-tag{font-size:11px;font-weight:600;letter-spacing:.5px;padding:4px 12px;border-radius:100px;border:1px solid currentColor;}
-        @media(max-width:768px){.pr{padding:70px 24px;}.pr-grid{grid-template-columns:1fr;}}
+        @media(max-width:768px){.pr{padding:70px 0;}.pr-in{max-width:100%;}.pr-hd{margin-bottom:44px;padding:0 24px;}.pr-grid{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:24px;padding:0 24px 18px;-webkit-overflow-scrolling:touch;}.pr-grid::-webkit-scrollbar{height:4px;}.pr-grid::-webkit-scrollbar-track{background:#e8eef6;border-radius:100px;margin:0 24px;}.pr-grid::-webkit-scrollbar-thumb{background:#4a90d9;border-radius:100px;}.pr-card{flex:0 0 min(84vw,430px);scroll-snap-align:start;min-height:260px;}}
+        @media(max-width:480px){.pr{padding:60px 0;}.pr-hd{padding:0 16px;}.pr-grid{gap:14px;scroll-padding:16px;padding:0 16px 18px;}.pr-grid::-webkit-scrollbar-track{margin:0 16px;}.pr-card{flex-basis:86vw;min-height:270px;padding:26px 20px;border-radius:12px;}.pr-desc{font-size:13px;line-height:1.7;}.pr-tag{font-size:10px;padding:4px 10px;}}
       `}</style>
 
       <section className="pr" id="projects">

@@ -1,7 +1,7 @@
 export default function About() {
   const details = [
     ["Name","Vanitha S"],
-    ["Degree","BA Economics (3rd Year)"],
+    ["Degree","BA Economics (2023-2026)"],
     ["College","Kunthalavai Naachiyar Arts College"],
     ["Location","Thanjavur, Tamil Nadu"],
     ["Phone","8807229174"],
@@ -29,7 +29,8 @@ export default function About() {
         .abt-langs{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;}
         .abt-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:6px 18px;font-size:13px;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:8px;}
         .abt-dot{width:8px;height:8px;border-radius:50%;}
-        @media(max-width:768px){.abt{padding:70px 24px;}.abt-in{grid-template-columns:1fr;gap:48px;}.abt-dg{grid-template-columns:1fr;}}
+        @media(max-width:768px){.abt{padding:70px 24px;}.abt-in{grid-template-columns:1fr;gap:48px;}.abt-dg{grid-template-columns:1fr;}.abt-card{padding:34px 28px;}}
+        @media(max-width:480px){.abt{padding:60px 16px;}.abt-ttl{font-size:32px;}.abt-p{font-size:14px;line-height:1.8;}.abt-card{padding:30px 22px;border-radius:12px;}.abt-q{font-size:15px;line-height:1.75;}.abt-pill{width:100%;justify-content:flex-start;}.abt-v{overflow-wrap:anywhere;}}
       `}</style>
 
       <section className="abt" id="about">

@@ -29,6 +29,7 @@ export default function Contact() {
         .f-btn{width:100%;background:#c9a84c;color:#0d1b3e;font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;padding:15px;border:none;border-radius:8px;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:8px;}
         .f-btn:hover{background:#d4b55a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.35);}
         @media(max-width:768px){.ct{padding:70px 24px;}.ct-in{grid-template-columns:1fr;gap:48px;}.ct-form{padding:28px 24px;}}
+        @media(max-width:480px){.ct{padding:60px 16px;}.ct-ttl{font-size:32px;}.ct-sub{font-size:14px;line-height:1.75;margin-bottom:32px;}.ct-item{align-items:flex-start;}.ct-iv{overflow-wrap:anywhere;line-height:1.5;}.ct-form{padding:24px 18px;border-radius:12px;}.f-btn{padding:14px;}}
       `}</style>
 
       <section className="ct" id="contact">

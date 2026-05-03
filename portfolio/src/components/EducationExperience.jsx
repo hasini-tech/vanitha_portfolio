@@ -40,7 +40,8 @@ export default function EducationExperience() {
         .exp-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
         .exp-li{display:flex;gap:10px;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.75);}
         .exp-dot{flex-shrink:0;width:6px;height:6px;border-radius:50%;background:#c9a84c;margin-top:7px;}
-        @media(max-width:768px){.ee{padding:70px 24px;}.ee-in{grid-template-columns:1fr;gap:56px;}}
+        @media(max-width:768px){.ee{padding:70px 24px;}.ee-in{grid-template-columns:1fr;gap:56px;}.ee-ttl{margin-bottom:30px;}}
+        @media(max-width:480px){.ee{padding:60px 16px;}.tl{padding-left:22px;}.tl::before{left:6px;}.tl-dot{left:-22px;width:14px;height:14px;}.tl-card,.exp-card{padding:22px 18px;border-radius:12px;}.tl-deg,.exp-role{font-size:15px;line-height:1.45;}.tl-inst,.exp-co{line-height:1.55;}.exp-li{font-size:13px;}}
       `}</style>
 
       <section className="ee" id="experience">
